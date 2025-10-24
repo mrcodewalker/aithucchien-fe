@@ -1,0 +1,50 @@
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" 
+        [ngClass]="{'bg-white/90 shadow-lg backdrop-blur-sm': isScrolled, 'bg-transparent': !isScrolled}">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#" class="text-3xl font-bold transition-colors duration-300"
+               [ngClass]="{'text-gray-800': isScrolled, 'text-white': !isScrolled}">
+               Bản Yên Hòa
+            </a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex">
+            <ul class="flex items-center space-x-8">
+                <li><a href="#" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Trang chủ</a></li>
+                <li><a href="#history" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Lịch sử</a></li>
+                <!-- <li><a href="#festival" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Lễ hội</a></li> -->
+                <li><a href="#tour-itinerary" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Lịch trình</a></li>
+                <li><a href="#explore" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Khám phá</a></li>
+                <li><a href="#experiences" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Trải nghiệm</a></li>
+                <li><a href="#handbook" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Cẩm nang</a></li>
+                <li><a href="#contact" class="nav-link" [ngClass]="{'text-gray-700': isScrolled, 'text-white': !isScrolled}">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button (click)="toggleMenu()" class="focus:outline-none transition-colors duration-300"
+                    [ngClass]="{'text-gray-800': isScrolled, 'text-white': !isScrolled}">
+                <i class="pi pi-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden transition-all duration-300 ease-in-out overflow-hidden" 
+         [ngClass]="{'max-h-96': isMenuOpen, 'max-h-0': !isMenuOpen}">
+        <nav class="bg-white/95 backdrop-blur-sm shadow-lg py-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#" class="mobile-nav-link">Trang chủ</a></li>
+                <li><a href="#history" class="mobile-nav-link">Lịch sử</a></li>
+                <li><a href="#festival" class="mobile-nav-link">Lễ hội</a></li>
+                <li><a href="#tour-itinerary" class="mobile-nav-link">Lịch trình</a></li>
+                <li><a href="#explore" class="mobile-nav-link">Khám phá</a></li>
+                <li><a href="#experiences" class="mobile-nav-link">Trải nghiệm</a></li>
+                <li><a href="#handbook" class="mobile-nav-link">Cẩm nang</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

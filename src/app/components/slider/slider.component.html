@@ -1,0 +1,7 @@
+<div class="relative w-full h-full overflow-hidden">
+    <div *ngFor="let image of images; let i = index"
+         class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+         [ngClass]="{'opacity-100': i === currentIndex, 'opacity-0': i !== currentIndex}">
+        <img [src]="image" class="w-full h-full object-cover" alt="Slide {{i + 1}}">
+    </div>
+</div>

@@ -1,0 +1,350 @@
+<div class="relative h-screen">
+    <app-slider class="absolute inset-0 w-full h-full"></app-slider>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">Yên Hòa - Nơi thời gian ngưng lại.</h1>
+        <p class="text-lg md:text-2xl mb-8">Khám phá vẻ đẹp tiềm ẩn, trải nghiệm văn hóa độc đáo.</p>
+        <a href="#tour-itinerary" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out">
+            Bắt đầu hành trình
+        </a>
+    </div>
+</div>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Tại sao nên chọn Bản Yên Hoà?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="assets/images/cde43b98176b9a35c37a3.jpg" alt="Thiên nhiên kỳ vĩ" class="w-full h-64 object-cover rounded-md mb-4 shadow-custom">
+                <h3 class="text-xl font-bold mb-2">Thiên nhiên kỳ vĩ</h3>
+                <p class="text-gray-600">Trải nghiệm những cảnh quan núi rừng, sông nước đẹp như tranh vẽ.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="assets/images/thocam2.jpg" alt="Văn hóa độc đáo" class="w-full h-64 object-cover rounded-md mb-4 shadow-custom">
+                <h3 class="text-xl font-bold mb-2">Văn hóa độc đáo</h3>
+                <p class="text-gray-600">Khám phá nét văn hóa đặc sắc của người dân tộc Thái.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="assets/images/ruoucan.png" alt="Kỷ niệm khó quên" class="w-full h-64 object-cover rounded-md mb-4 shadow-custom">
+                <h3 class="text-xl font-bold mb-2">Kỷ niệm khó quên</h3>
+                <p class="text-gray-600">Tham gia các hoạt động trekking, chèo thuyền, thưởng thức ẩm thực địa phương.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Khám Phá Qua Video</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video 1: Bản Yên Hòa -->
+            <div class="rounded-lg shadow-lg overflow-hidden video-shadow">
+                <h3 class="text-xl font-bold text-center py-4 bg-gray-100">Khám phá Bản Yên Hòa</h3>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/NJYBqjpngWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                </div>
+            </div>
+            <!-- Video 2: Thủy điện Bản Vẽ -->
+            <div class="rounded-lg shadow-lg overflow-hidden video-shadow">
+                <h3 class="text-xl font-bold text-center py-4 bg-gray-100">Vẻ đẹp Thủy điện Bản Vẽ</h3>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://baonghean.vn/embed/ifj635p1o9" frameborder="0" allowfullscreen class="w-full h-full"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tour-itinerary" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Lộ Trình Chi Tiết Chuyến Đi</h2>
+
+      <!-- Lựa chọn tour -->
+      <div class="text-center mb-12">
+        <button (click)="switchTab('2-days')" [ngClass]="{'bg-teal-500 text-white': activeTab === '2-days', 'bg-gray-300 text-gray-800': activeTab !== '2-days'}" class="font-bold py-3 px-6 rounded-l-lg hover:bg-teal-600 transition">Tour 2 Ngày 1 Đêm</button>
+        <button (click)="switchTab('1-day')" [ngClass]="{'bg-teal-500 text-white': activeTab === '1-day', 'bg-gray-300 text-gray-800': activeTab !== '1-day'}" class="font-bold py-3 px-6 rounded-r-lg hover:bg-teal-600 transition">Tour 1 Ngày</button>
+      </div>
+
+      <!-- Tour 2 Ngày 1 Đêm -->
+      <div *ngIf="activeTab === '2-days'">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-4">NGÀY 1: ĐẮM CHÌM TRONG VĂN HÓA VÀ NGHỀ TRUYỀN THỐNG</h3>
+        <!-- <p class="text-center text-gray-500 mb-10">(Ăn Trưa, Tối)</p> -->
+
+        <div class="relative wrap overflow-hidden p-10 h-full">
+            <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+
+          <!-- Timeline Item -->
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12">
+                    <img src="assets/images/hoaqua.png" alt="Di chuyển" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+                </div>
+            <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+              <i class="pi pi-car text-2xl text-white mx-auto"></i>
+                </div>
+                <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <p class="text-sm font-semibold text-teal-500">08:00 - 09:30</p>
+              <h4 class="font-bold text-gray-800 text-lg mb-2">DI CHUYỂN VÀ NHẬN PHÒNG HOMESTAY</h4>
+              <p class="text-sm text-gray-600 leading-snug">Ngắm cảnh, nhận phòng tại Homestay truyền thống và cảm nhận không gian sống mộc mạc.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12">
+                <img src="assets/images/thocam.jpg" alt="Dệt thổ cẩm" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+            </div>
+            <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                <i class="pi pi-palette text-2xl text-white mx-auto"></i>
+            </div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <p class="text-sm font-semibold text-teal-500">09:30 - 12:00</p>
+                <h4 class="font-bold text-gray-800 text-lg mb-2">THAM QUAN LÀNG NGHỀ DỆT THỔ CẨM</h4>
+                <p class="text-sm text-gray-600 leading-snug">Tìm hiểu quy trình trồng dâu, nuôi tằm, ươm tơ, dệt vải và thử sức dệt vài đường tơ.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12">
+                <img src="assets/images/bonuongxe.png" alt="Ẩm thực" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+              </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                <i class="pi pi-star text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">12:00 - 13:30</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">THƯỞNG THỨC ẨM THỰC BẢN ĐỊA</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Ăn trưa với các món đặc sắc của người Thái như gà đồi nướng, cá suối, xôi nếp cẩm.</p>
+                </div>
+            </div>
+
+          <!-- Timeline Item -->
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="order-1 w-5/12">
+                    <img src="assets/images/thapcoxoplot.jpg" alt="Tháp cổ" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+                </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                  <i class="pi pi-camera text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">13:30 - 15:30</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">KHÁM PHÁ THÁP CỔ XỐP LỢT</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Tham quan tháp cổ hơn 1000 năm tuổi, tìm hiểu về lịch sử và kiến trúc độc đáo.</p>
+              </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12">
+                <img src="assets/images/main3.jpg" alt="Giao lưu" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+            </div>
+            <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                <i class="pi pi-users text-2xl text-white mx-auto"></i>
+                </div>
+                <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <p class="text-sm font-semibold text-teal-500">15:30 - 17:30</p>
+                <h4 class="font-bold text-gray-800 text-lg mb-2">GIAO LƯU CỘNG ĐỒNG</h4>
+                <p class="text-sm text-gray-600 leading-snug">Khám phá bản làng, trò chuyện với người dân và hòa mình vào nhịp sống yên bình.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12">
+                <img src="assets/images/ruoucan.png" alt="Văn hóa" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+            </div>
+            <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                <i class="pi pi-moon text-2xl text-white mx-auto"></i>
+            </div>
+            <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <p class="text-sm font-semibold text-teal-500">18:30 - 21:00</p>
+                <h4 class="font-bold text-gray-800 text-lg mb-2">BỮA TỐI VÀ GIAO LƯU VĂN HÓA</h4>
+                <p class="text-sm text-gray-600 leading-snug">Thưởng thức đặc sản, tham gia múa xòe, hát lượn, nhảy sạp và đốt lửa trại.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-4 mt-16">NGÀY 2: KHÁM PHÁ THIÊN NHIÊN VÀ CHIA TAY YÊN HÒA</h3>
+        <p class="text-center text-gray-500 mb-10">(Ăn Sáng, Trưa)</p>
+
+        <div class="relative wrap overflow-hidden p-10 h-full">
+          <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12">
+                <img src="assets/images/main5.jpg" alt="Bữa sáng" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+              </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                  <i class="pi pi-sun text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">07:00 - 08:00</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">BỮA SÁNG TRUYỀN THỐNG</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Thưởng thức phở, bún hoặc xôi bản địa và trà nóng để chuẩn bị năng lượng cho ngày mới.</p>
+              </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div class="order-1 w-5/12">
+                <img src="assets/images/namnon.jpg" alt="Sông Nậm Nơn" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+              </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                  <i class="pi pi-compass text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">08:00 - 11:30</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">TRẢI NGHIỆM TRÊN DÒNG SÔNG NẬM NƠN</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Đi thuyền ngắm cảnh, chèo Kayak/SUP, hít thở không khí trong lành và cảm nhận sự bình yên.</p>
+              </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12">
+                <img src="assets/images/hoaqua.png" alt="Mua sắm" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+              </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                  <i class="pi pi-shopping-bag text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">11:30 - 14:00</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">BỮA TRƯA, MUA SẮM VÀ CHIA TAY</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Dùng bữa trưa cuối cùng, mua sắm quà lưu niệm và gửi lời chào tạm biệt người dân bản.</p>
+              </div>
+          </div>
+
+          <!-- Timeline Item -->
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div class="order-1 w-5/12">
+                <img src="assets/images/main9.jpg" alt="Kết thúc" class="rounded-lg shadow-xl w-full h-auto shadow-custom">
+              </div>
+              <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-12 h-12 rounded-full">
+                  <i class="pi pi-flag text-2xl text-white mx-auto"></i>
+              </div>
+              <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                  <p class="text-sm font-semibold text-teal-500">14:00</p>
+                  <h4 class="font-bold text-gray-800 text-lg mb-2">KẾT THÚC TOUR</h4>
+                  <p class="text-sm text-gray-600 leading-snug">Di chuyển về lại điểm xuất phát, kết thúc chuyến tham quan Bản Yên Hòa đáng nhớ.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour 1 Ngày -->
+      <div *ngIf="activeTab === '1-day'" class="mt-10">
+          <h3 class="text-3xl font-bold text-center text-gray-800 mb-10">LỰA CHỌN TOUR 1 NGÀY</h3>
+          <div class="max-w-4xl mx-auto bg-gradient-to-r from-green-50 to-teal-50 rounded-lg shadow-xl p-8">
+            <div class="flex items-center justify-center">
+                <img src="assets/images/main.jpg" alt="Tour 1 ngày" class="rounded-lg shadow-xl w-2/3 h-auto shadow-custom">
+            </div>
+              <ul class="space-y-4 mt-8">
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>08:00 - 09:30:</strong> Di chuyển đến Bản Yên Hòa.</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>09:30 - 12:00:</strong> Tham quan làng nghề dệt thổ cẩm, trải nghiệm ngắn và mua sắm.</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>12:00 - 13:30:</strong> Ăn trưa ẩm thực bản địa.</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>13:30 - 15:00:</strong> Tham quan Tháp cổ Xốp Lợt.</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>15:00 - 16:30:</strong> Trải nghiệm ngắn trên sông Nậm Nơn (đi thuyền ngắm cảnh).</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>16:30 - 17:00:</strong> Mua sắm quà lưu niệm và chuẩn bị khởi hành về.</span></li>
+                  <li class="flex items-start"><i class="pi pi-check-circle text-green-500 mt-1 mr-3"></i><span><strong>17:00:</strong> Kết thúc tour và di chuyển về.</span></li>
+              </ul>
+              <p class="mt-6 text-center text-sm text-white-600 bg-green-300 p-3 rounded-lg"><strong>Lưu ý:</strong> Tour 1 ngày sẽ rất gấp gáp và bỏ lỡ nhiều trải nghiệm sâu sắc. Chúng tôi khuyến khích bạn chọn tour 2 ngày 1 đêm để có được những khoảnh khắc đáng nhớ nhất.</p>
+          </div>
+      </div>
+
+      <!-- Lưu ý chung -->
+      <div class="mt-20">
+          <div class="max-w-4xl mx-auto bg-gradient-to-r from-green-50 to-teal-100 rounded-2xl shadow-xl p-8 border-t-4 border-teal-400">
+              <div class="flex items-center mb-6">
+                  <i class="pi pi-info-circle text-teal-600 text-4xl mr-4"></i>
+                  <h3 class="font-bold text-2xl text-teal-800">Lưu ý chung cho du khách</h3>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Nên mặc trang phục lịch sự, thoải mái, dễ vận động.</span>
+                  </div>
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Mang theo kem chống nắng, mũ, kính râm, thuốc men cá nhân.</span>
+                  </div>
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Luôn tôn trọng phong tục, tập quán của người dân địa phương.</span>
+                  </div>
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Thông báo trước về tình trạng sức khỏe đặc biệt (dị ứng, bệnh lý...).</span>
+                  </div>
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Giữ gìn vệ sinh chung, không xả rác bừa bãi.</span>
+                  </div>
+                  <div class="flex items-start">
+                      <i class="pi pi-check-circle text-teal-500 mt-1 mr-3"></i>
+                      <span>Nên mang theo một ít tiền mặt để mua sắm.</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<section id="explore" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="md:order-2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Lễ hội Tết Hoa Quả</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Lễ hội Tết Hoa Quả của đồng bào dân tộc Thái được tổ chức thường niên, là dịp quan trọng nhằm bảo tồn và phát huy các giá trị văn hóa truyền thống đặc sắc. Bên cạnh đó, bản Yên Hòa đã thành lập Câu lạc bộ Văn hóa đồng bào dân tộc Thái, đóng vai trò kết nối cộng đồng, đồng thời phục vụ các hoạt động du lịch văn hóa, góp phần tạo nên điểm nhấn đặc sắc cho du lịch địa phương.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:order-1">
+                <img src="assets/images/hoaqua.png" alt="Lễ hội Tết Hoa Quả 1" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/hoaqua2.png" alt="Lễ hội Tết Hoa Quả 2" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/hoaqua3.png" alt="Lễ hội Tết Hoa Quả 3" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/hoaqua4.png" alt="Lễ hội Tết Hoa Quả 4" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experiences" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tháp Cổ Xốp Lợt</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Ngoài ra, Bản Yên Hoà còn sở hữu nhiều tiềm năng du lịch hấp dẫn với các điểm đến độc đáo như: Tháp cổ Xốp Lợt có trên 1000 năm tuổi, là một di tích kiến trúc nghệ thuật cấp tỉnh. Đây được coi là một điểm tâm linh, du lịch cộng đồng quan trọng của địa phương; hiện đang trong quá trình trùng tu, tôn tạo để đón khách du lịch tham quan. Lễ hội Tết Hoa Quả của đồng bào dân tộc Thái được tổ chức thường niên, là dịp quan trọng nhằm bảo tồn và phát huy các giá trị văn hóa truyền thống đặc sắc. Bên cạnh đó, bản Yên Hòa đã thành lập Câu lạc bộ Văn hóa đồng bào dân tộc Thái, đóng vai trò kết nối cộng đồng, đồng thời phục vụ các hoạt động du lịch văn hóa, góp phần tạo nên điểm nhấn đặc sắc cho du lịch địa phương.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="assets/images/thapcoxoplot.jpg" alt="Tháp Cổ Xốp Lợt 1" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/thapcoxoplot2.jpg" alt="Tháp Cổ Xốp Lợt 2" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/thapcoxoplot3.jpg" alt="Tháp Cổ Xốp Lợt 3" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/thapcoxoplot4.jpg" alt="Tháp Cổ Xốp Lợt 4" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="handbook" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+             <div class="grid grid-cols-2 gap-4 md:order-1">
+                <img src="assets/images/thocam.jpg" alt="Dệt thổ cẩm 1" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/thocam2.jpg" alt="Dệt thổ cẩm 2" class="rounded-lg shadow-lg object-cover w-full h-full shadow-custom">
+                <img src="assets/images/thocam3.webp" alt="Dệt thổ cẩm 3" class="rounded-lg shadow-lg col-span-2 object-cover w-full h-64 shadow-custom">
+            </div>
+            <div class="md:order-2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Làng nghề Dệt thổ cẩm</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Bản Yên Hòa, xã Mỹ Lý là bản thuộc vùng biên giới với nước bàn Lào với hơn 95 hộ dân là người đồng bào Thái sinh sống; là một bản có nghề truyền thống lâu đời về trồng dâu, nuôi tằm, ươm tơ, dệt vải thổ cẩm; các sản phẩm dệt thổ cẩm của bản không chỉ nổi tiếng trong tỉnh mà còn nổi tiếng với nhân dân nước bạn Lào vùng biên giới và khách thập phương khi về với bản làng. Bản Yên Hòa được công nhận làng nghề Dệt thổ cẩm từ cuối năm 2017, từ đó nghề truyền thống tại bản được quan tâm giữ gìn và phát triển góp phần phát huy giá trị văn hóa truyền thống tạo sinh kế, tăng thu nhập cho nhân dân tại bản.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-history></app-history>
